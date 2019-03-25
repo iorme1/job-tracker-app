@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2><%= @company.name %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p><%= @company.website %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p>Sent application on <%= @company.created_at.strftime("%b %d, %Y") %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Company Summary</h3>
+      <p><%= @company.summary %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Company Notes</h3>
+      <p><%= @company.notes %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Company Cover Letter</h3>
+      <p><%= @company.cover_letter %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Company Technologies</h3>
+      <p><%= @company.technologies %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Company Contacts</h3>
+      <p><%= @company.contacts %></p>
+    </div>
+  </div>
+</div>

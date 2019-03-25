@@ -1,0 +1,19 @@
+<% @companies.each do |c| %>
+  <div class="row">
+    <div class="col-12">
+      <h3> <%= c.name %> </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p> <%= c.summary %> </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= link_to "Full Company Info", company_path(c), class: "btn btn-warning btn-sm" %>
+    </div>
+  </div><br>
+<% end %>

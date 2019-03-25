@@ -1,0 +1,51 @@
+<%= form_for @company do |f| %>
+  <% if @company.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(@company.errors.count, "error") %></h4>
+      <ul>
+        <% @company.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-field">
+    <%= f.label "Company Name" %><br>
+    <%= f.text_area(:name, cols: 35, rows: 1) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company website" %><br>
+    <%= f.text_area(:website, cols: 60, rows: 1) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Summary" %><br>
+    <%= f.text_area(:summary, cols: 100, rows: 10) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Notes" %><br>
+    <%= f.text_area(:notes, cols: 100, rows: 10) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Cover Letter" %><br>
+    <%= f.text_area(:cover_letter, cols: 100, rows: 15) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Contacts" %><br>
+    <%= f.text_area(:contacts, cols: 100, rows: 5) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Technologies" %><br>
+    <%= f.text_area(:technologies, cols: 100, rows: 5) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.submit "Save", class: "btn btn-info" %>
+  </div><br>
+<% end %>
