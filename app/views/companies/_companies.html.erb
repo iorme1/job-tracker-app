@@ -12,8 +12,12 @@
   </div>
 
   <div class="row">
-    <div class="col-12">
+    <div class="col-6">
       <%= link_to "Full Company Info", company_path(c), class: "btn btn-warning btn-sm" %>
+    </div>
+    <div class="col-6">
+      <%= link_to "Edit", edit_company_path(c), class: "btn btn-info btn-sm" %>
+      <%= link_to "Delete", company_path(c), class: "btn btn-danger btn-sm", method: :delete %>
     </div>
   </div><br>
 <% end %>
