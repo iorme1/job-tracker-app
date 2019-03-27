@@ -1,24 +1,26 @@
 <% @companies.each do |c| %>
-  <div class="row">
-    <div class="col-12">
-      <h3> <%= c.name %> </h3>
-      <p> <%= c.created_at.strftime("%b %d, %Y") %></p>
+  <div class="company-index-container">
+    <div class="row">
+      <div class="col-12">
+        <h3> <%= c.name %> </h3>
+        <p> <%= c.created_at.strftime("%b %d, %Y") %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <p> <%= c.summary %> </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <%= link_to "Full Company Info", company_path(c), class: "btn btn-warning btn-sm" %>
+      </div>
+      <div class="col-6">
+        <%= link_to "Edit", edit_company_path(c), class: "btn btn-info btn-sm" %>
+        <%= link_to "Delete", company_path(c), class: "btn btn-danger btn-sm", method: :delete %>
+      </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-12">
-      <p> <%= c.summary %> </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6">
-      <%= link_to "Full Company Info", company_path(c), class: "btn btn-warning btn-sm" %>
-    </div>
-    <div class="col-6">
-      <%= link_to "Edit", edit_company_path(c), class: "btn btn-info btn-sm" %>
-      <%= link_to "Delete", company_path(c), class: "btn btn-danger btn-sm", method: :delete %>
-    </div>
-  </div><br>
 <% end %>

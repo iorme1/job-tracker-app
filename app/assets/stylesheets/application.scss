@@ -22,3 +22,42 @@ body, html {
   font-family: Georgia;
   letter-spacing: 2px;
 }
+
+
+.devise-forms {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-top: 20px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 3px 4px white;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 3px 4px white;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 3px 4px white;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.devise-title-font {
+  font-family: "Georgia";
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px grey;
+}
+
+.devise-label {
+  font-family: "Georgia";
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px grey;
+}
+
+
+.company-index-container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 1px 2px 2px 2px black;
+  border-radius: 5px;
+}
