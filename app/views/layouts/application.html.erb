@@ -13,7 +13,9 @@
     <nav class="navbar navbar-dark bg-dark">
       <%= link_to "Home", root_path, class: "navbar-brand" %>
       <form class="form-inline">
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+        <% if current_user %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+        <% end %>
       </form>
     </nav>
     <div class="flash">
