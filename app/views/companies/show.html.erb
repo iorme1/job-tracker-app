@@ -20,35 +20,35 @@
   <div class="row">
     <div class="col-12">
       <h3 class="">Company Summary</h3>
-      <p><%= @company.summary %></p>
+      <p><%= simple_format @company.summary %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
       <h3>Company Notes</h3>
-      <p><%= @company.notes %></p>
+      <p><%= simple_format @company.notes %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
       <h3>Company Cover Letter</h3>
-      <p><%= @company.cover_letter %></p>
+      <p><%= simple_format @company.cover_letter %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
       <h3>Company Technologies</h3>
-      <p><%= @company.technologies %></p>
+      <p><%= simple_format @company.technologies %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
       <h3>Company Contacts</h3>
-      <p><%= @company.contacts %></p>
+      <p><%= simple_format @company.contacts %></p>
     </div>
   </div>
 </div>
