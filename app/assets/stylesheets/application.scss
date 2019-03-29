@@ -18,12 +18,12 @@
 body, html {
   min-height: 100%;
   box-sizing: border-box;
-  font-family: Georgia;
+  font-family: Helvetica Georgia;
   letter-spacing: 2px;
 }
 
 body {
-  background: linear-gradient(110deg, #AFC7E3 60%, #3F86D8 60%);
+  background: linear-gradient(110deg, #AFC7E3 60%, whitesmoke 60%);
 }
 
 .devise-forms {

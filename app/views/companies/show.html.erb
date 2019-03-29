@@ -1,53 +1,53 @@
 <div class="container mt-2 animated fadeIn">
   <div class="row">
     <div class="col-12">
-      <h2><%= @company.name %></h2>
+      <h2 class="font-italic"><strong><%= @company.name %></strong></h2>
     </div>
   </div>
 
   <div class="row mb-2">
     <div class="col-12">
-      <a href="<%=@company.website %>"><%= @company.name %> website</a>
+      <a href="<%=@company.website %>"><strong><%= @company.name %> website</strong></a>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <p>Sent application on <%= @company.created_at.strftime("%b %d, %Y") %></p>
+      <p class="font-italic">Sent application on <%= @company.created_at.strftime("%b %d, %Y") %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <h3 class="">Company Summary</h3>
+      <h3 class="font-italic"><strong>Company Summary</strong></h3>
       <p><%= simple_format @company.summary %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <h3>Company Notes</h3>
+      <h3 class="font-italic"><strong>Company Notes</strong></h3>
       <p><%= simple_format @company.notes %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <h3>Company Cover Letter</h3>
+      <h3 class="font-italic"><strong>Company Cover Letter</strong></h3>
       <p><%= simple_format @company.cover_letter %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <h3>Company Technologies</h3>
+      <h3 class="font-italic"><strong>Company Technologies</strong></h3>
       <p><%= simple_format @company.technologies %></p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12">
-      <h3>Company Contacts</h3>
+      <h3 class="font-italic"><strong>Company Contacts</strong></h3>
       <p><%= simple_format @company.contacts %></p>
     </div>
   </div>
