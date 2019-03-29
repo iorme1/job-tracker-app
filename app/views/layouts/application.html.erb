@@ -14,7 +14,7 @@
       <%= link_to "Home", root_path, class: "navbar-brand" %>
       <form class="form-inline">
         <% if current_user %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
         <% end %>
       </form>
     </nav>

@@ -1,25 +1,25 @@
 <% @companies.each do |c| %>
-  <div class="company-index-container">
+  <div class="company-index-container animated fadeInLeft">
     <div class="row">
       <div class="col-12">
-        <h3> <%= c.name %> </h3>
-        <p> <%= c.created_at.strftime("%b %d, %Y") %></p>
+        <h2 class="company-index-name text-center p-2"> <%= c.name %> </h2>
+        <p class="pl-2"> <%= c.created_at.strftime("%b %d, %Y") %></p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
-        <p> <%= c.summary %> </p>
+        <p class="pl-2"> <%= c.summary %> </p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-6">
-        <%= link_to "Full Company Info", company_path(c), class: "btn btn-warning btn-sm" %>
-      </div>
-      <div class="col-6">
-        <%= link_to "Edit", edit_company_path(c), class: "btn btn-info btn-sm" %>
-        <%= link_to "Delete", company_path(c), class: "btn btn-danger btn-sm", method: :delete %>
+      <div class="col-12">
+        <div class="actions-bar-index-company pt-3 pb-3 text-center">
+          <%= link_to "Full Company Info", company_path(c), class: "btn btn-outline-info btn-sm m-1" %>
+          <%= link_to "Edit", edit_company_path(c), class: "btn btn-outline-primary btn-sm m-1" %>
+          <%= link_to "Delete", company_path(c), class: "btn btn-outline-danger btn-sm m-1", method: :delete %>
+        </div>
       </div>
     </div>
   </div>

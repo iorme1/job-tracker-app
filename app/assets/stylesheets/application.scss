@@ -15,7 +15,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
 body, html {
   min-height: 100%;
   box-sizing: border-box;
@@ -23,6 +22,9 @@ body, html {
   letter-spacing: 2px;
 }
 
+body {
+  background: linear-gradient(110deg, #AFC7E3 60%, #3F86D8 60%);
+}
 
 .devise-forms {
   background-color: black;
@@ -53,11 +55,19 @@ body, html {
   text-shadow: 0.8px 1.6px 2.1px grey;
 }
 
-
 .company-index-container {
-  margin: 10px;
-  padding: 10px;
+  margin: 0 auto 10px;
   border: 1px solid black;
   box-shadow: 1px 2px 2px 2px black;
   border-radius: 5px;
+  width: 75%;
+}
+
+.company-index-name {
+  background: #343a40;
+  color: whitesmoke;
+}
+
+.actions-bar-index-company {
+  background: #343a40;
 }
