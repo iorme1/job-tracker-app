@@ -3,14 +3,14 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
-    @companies = Company.all
+    @companies = current_user.companies.all 
   end
 
   def show
   end
 
   def new
-    @company = Company.new 
+    @company = Company.new
   end
 
   def create

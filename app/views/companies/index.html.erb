@@ -9,5 +9,13 @@
       </h1>
     </div>
   </div>
-  <%= render 'companies' %>
+  <% if @companies.empty? %>
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center text-danger"> Looks like you don't have any companies yet!</p>
+      </div>
+    </div>
+  <% else %>
+    <%= render 'companies' %>
+  <% end %>
 </div>
