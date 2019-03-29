@@ -3,10 +3,14 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
-    @companies = current_user.companies.all 
+    @companies = current_user.companies.all
   end
 
   def show
+    if @company.user != current_user
+      flash[:alert] = "You do not have access to see that user's companies."
+      redirect_to root_path
+    end 
   end
 
   def new
