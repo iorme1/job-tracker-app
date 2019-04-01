@@ -6,9 +6,21 @@
         <%= link_to new_company_path, class: "btn btn-outline-primary" do %>
           New <i class="fa fa-plus"></i>
         <% end %>
+        <%= link_to new_invitation_path, class: "btn btn-outline-primary" do %>
+          Share Progress <i class="fa fa-users"></i>
+        <% end %>
       </h1>
     </div>
   </div>
+
+  <% if !@pending_invitations.empty? %>
+    <% @pending_invitations.each do |inv| %>
+      <p class="text-center">
+        <%= link_to "Accept Invitation", root_path %> <span> from <%= inv.sent_by %> </span>
+      </p>
+    <% end %>
+  <% end %>
+
   <% if @companies.empty? %>
     <div class="row">
       <div class="col-12">

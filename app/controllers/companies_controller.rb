@@ -3,6 +3,7 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
+    @pending_invitations = current_user.invitations.where(accepted: false)
     @companies = current_user.companies.all
   end
 
@@ -10,7 +11,7 @@ class CompaniesController < ApplicationController
     if @company.user != current_user
       flash[:alert] = "You do not have access to see that user's companies."
       redirect_to root_path
-    end 
+    end
   end
 
   def new

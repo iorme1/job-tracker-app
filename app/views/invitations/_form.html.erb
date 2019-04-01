@@ -1,0 +1,10 @@
+<%= form_for Invitation.new do |f| %>
+  <div class="form-field">
+    <%= f.label "Share With" %>
+    <%= f.text_field :sent_to %>
+  </div>
+
+  <div class="form-field">
+    <%= f.submit "Send Invitation to Share", class: "btn btn-info" %>
+  </div><br>
+<% end %>
