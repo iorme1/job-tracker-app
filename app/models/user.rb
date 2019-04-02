@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :companies
-  has_many :invitations  
+  has_many :invitations
+  has_many :shares 
 end

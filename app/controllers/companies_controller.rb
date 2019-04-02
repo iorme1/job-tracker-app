@@ -3,12 +3,15 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def index
+    @shares = current_user.shares.all
     @pending_invitations = current_user.invitations.where(accepted: false)
     @companies = current_user.companies.all
   end
 
   def show
-    if @company.user != current_user
+    owner = @company.user
+
+    unless current_user == owner || authorized_user(owner)
       flash[:alert] = "You do not have access to see that user's companies."
       redirect_to root_path
     end
@@ -55,6 +58,16 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def shared_index
+    @share = Share.find(params[:id])
+    @owner = User.find_by_email(@share.authorized_by)
+    @shared_companies = @owner.companies.all 
+  end
+
+  def shared_show
+
+  end
+
   private
 
   def company_params
@@ -63,5 +76,14 @@ class CompaniesController < ApplicationController
 
   def set_company
     @company = Company.find(params[:id])
+  end
+
+  def authorized_user(owner)
+    shares = current_user.shares.all
+
+    shares.each do |share|
+      return true if share.authorized_by == owner.email
+    end
+    false
   end
 end

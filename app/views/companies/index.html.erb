@@ -16,7 +16,15 @@
   <% if !@pending_invitations.empty? %>
     <% @pending_invitations.each do |inv| %>
       <p class="text-center">
-        <%= link_to "Accept Invitation", root_path %> <span> from <%= inv.sent_by %> </span>
+        <%= link_to "Accept Invite from #{inv.sent_by}", new_share_path(inv) %>
+      </p>
+    <% end %>
+  <% end %>
+
+  <% if !@shares.empty? %>
+    <% @shares.each do |share| %>
+      <p class="text-center">
+        <%= link_to "View #{share.authorized_by}'s companies", company_shared_index_path(share) %>
       </p>
     <% end %>
   <% end %>
