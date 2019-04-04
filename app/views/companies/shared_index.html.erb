@@ -1,4 +1,13 @@
 <div class="container-fluid mt-5">
+  <div class="row mb-2">
+    <div class="col-12 text-center text-primary">
+      <h3>
+        Viewing
+        <span class="text-danger"><%= "#{@owner.email}'s" %></span> 
+        company
+      </h3>
+    </div>
+  </div>
   <% @shared_companies.each do |c| %>
     <div class="company-index-container animated fadeInLeft">
       <div class="row">

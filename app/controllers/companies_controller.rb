@@ -61,7 +61,7 @@ class CompaniesController < ApplicationController
   def shared_index
     @share = Share.find(params[:id])
     @owner = User.find_by_email(@share.authorized_by)
-    @shared_companies = @owner.companies.all 
+    @shared_companies = @owner.companies.all
   end
 
   def shared_show
