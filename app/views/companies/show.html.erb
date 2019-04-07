@@ -1,13 +1,19 @@
 <div class="container mt-2 animated fadeIn">
   <div class="row">
     <div class="col-12">
-      <h2 class="font-italic"><strong><%= @company.name %></strong></h2>
+      <h1 class="font-italic"><strong><%= @company.name %></strong></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3 class="font-italic"><strong><%= @company.job_title %></strong></h3>
     </div>
   </div>
 
   <div class="row mb-2">
     <div class="col-12">
-      <a href="<%=@company.website %>"><strong><%= @company.name %> website</strong></a>
+     <a href="<%=@company.website %>"><strong><%= @company.name %> website</strong></a>
     </div>
   </div>
 

@@ -16,7 +16,12 @@
   </div><br>
 
   <div class="form-field">
-    <%= f.label "Company website" %><br>
+    <%= f.label "Company Job Title" %><br>
+    <%= f.text_area(:job_title, cols: 60, rows: 1) %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.label "Company Website" %><br>
     <%= f.text_area(:website, cols: 60, rows: 1) %>
   </div><br>
 
