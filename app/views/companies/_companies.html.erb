@@ -2,8 +2,19 @@
   <div class="company-index-container animated fadeInLeft">
     <div class="row">
       <div class="col-12">
-        <h2 class="company-index-name text-center p-2 font-italic"> <%= c.name %> </h2>
-        <p class="pl-2"> <%= c.created_at.strftime("%b %d, %Y") %></p>
+        <h2 class="company-index-name text-center p-2 font-italic">
+          <%= c.name %>
+        </h2>
+        <p class="pl-2"> <%= c.created_at.strftime("%b %d, %Y") %>
+          <% if c.status == "rejected" %>
+             <span class="status-index-rej"> - <%= c.status %></span>
+          <% elsif c.status == "pending" %>
+             <span class="status-index-pend"> - <%= c.status %></span>
+          <% else %>
+            <span class="status-index-inq"> - <%= c.status %></span>
+          <% end %>
+
+        </p>
       </div>
     </div>
 

@@ -51,6 +51,11 @@
   </div><br>
 
   <div class="form-field">
+    <%= f.label "Status" %><br>
+    <%= f.select :status, Company.statuses.keys.map { |w| [w.humanize, w] } %>
+  </div><br>
+
+  <div class="form-field">
     <%= f.submit "Save", class: "btn btn-info" %>
   </div><br>
 <% end %>
