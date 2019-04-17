@@ -26,6 +26,11 @@
   </div><br>
 
   <div class="form-field">
+    <%= f.label "Company Job Posting Link" %><br>
+    <%= f.text_area(:job_post_link, cols: 60, rows: 1) %>
+  </div><br>
+
+  <div class="form-field">
     <%= f.label "Company Summary" %><br>
     <%= f.text_area(:summary, cols: 100, rows: 10) %>
   </div><br>

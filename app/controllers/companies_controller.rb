@@ -74,7 +74,7 @@ class CompaniesController < ApplicationController
     params.require(:company).permit(
       :summary, :notes, :cover_letter,
       :contacts, :technologies, :website,
-      :name, :job_title, :status
+      :name, :job_title, :status, :job_post_link
     )
   end
 
