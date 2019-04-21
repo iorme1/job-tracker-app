@@ -5,7 +5,7 @@ class CompaniesController < ApplicationController
   def index
     @shares = current_user.shares.all
     @pending_invitations = current_user.invitations.where(accepted: false)
-    @companies = current_user.companies.all
+    @companies = current_user.companies.all.page params[:page]
   end
 
   def show

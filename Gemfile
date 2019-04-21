@@ -19,6 +19,7 @@ gem "font-awesome-rails"
 gem "animate-rails"
 gem "httparty"
 gem "figaro"
+gem 'kaminari'
 #gem 'rack-cors'
 
 gem 'bootsnap', '>= 1.1.0', require: false

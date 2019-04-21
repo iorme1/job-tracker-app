@@ -7,6 +7,8 @@ class Company < ApplicationRecord
 
   after_commit :pending_status, on: :create
 
+  paginates_per 10
+
   def pending_status
     self.status = "pending"
   end
