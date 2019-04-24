@@ -70,7 +70,7 @@ class CompaniesController < ApplicationController
     @owner = User.find_by_email(@share.authorized_by)
 
     if params[:status]
-      @shared_companies = current_user.companies.all
+      @shared_companies = @owner.companies.all
         .status(params[:status])
         .page params[:page]
     else
