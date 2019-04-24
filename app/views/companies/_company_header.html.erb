@@ -2,11 +2,5 @@
   <%= c.name %>
 </h2>
 <p class="pl-2"> <%= c.created_at.strftime("%b %d, %Y") %>
-  <% if c.status == "rejected" %>
-     <span class="status-index-rej"> - <%= c.status %></span>
-  <% elsif c.status == "pending" %>
-     <span class="status-index-pend"> - <%= c.status %></span>
-  <% else %>
-    <span class="status-index-inq"> - <%= c.status %></span>
-  <% end %>
+  <span class="status-index-<%=c.status%>"> - <%= c.status %></span>
 </p>

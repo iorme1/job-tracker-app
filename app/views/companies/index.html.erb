@@ -29,6 +29,12 @@
     <% end %>
   <% end %>
 
+  <div class="row m-3">
+    <div class="col-12 text-center">
+      <%= render 'filter_companies' %>
+    </div>
+  </div>
+
   <% if @companies.empty? %>
     <div class="row">
       <div class="col-12">

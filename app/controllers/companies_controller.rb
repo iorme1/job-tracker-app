@@ -5,7 +5,14 @@ class CompaniesController < ApplicationController
   def index
     @shares = current_user.shares.all
     @pending_invitations = current_user.invitations.where(accepted: false)
-    @companies = current_user.companies.all.page params[:page]
+
+    if params[:status]
+      @companies = current_user.companies.all
+        .status(params[:status])
+        .page params[:page]
+    else
+      @companies = current_user.companies.all.page params[:page]
+    end
   end
 
   def show
@@ -61,11 +68,14 @@ class CompaniesController < ApplicationController
   def shared_index
     @share = Share.find(params[:id])
     @owner = User.find_by_email(@share.authorized_by)
-    @shared_companies = @owner.companies.all.page params[:page]
-  end
 
-  def shared_show
-
+    if params[:status]
+      @shared_companies = current_user.companies.all
+        .status(params[:status])
+        .page params[:page]
+    else
+      @shared_companies = @owner.companies.all.page params[:page]
+    end
   end
 
   private
