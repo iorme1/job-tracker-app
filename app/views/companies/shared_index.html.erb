@@ -1,17 +1,20 @@
-<div class="container-fluid mt-5">
-  <div class="row mb-2">
-    <div class="col-12 text-center text-primary">
-      <h3>
-        Viewing
-        <span class="text-danger"><%= "#{@owner.email}'s" %></span>
-        companies
-      </h3>
+<div class="container-fluid">
+  <div class="row mb-3 mt-2 text-center control-actions">
+    <div class="col-6 p-2">
+      <%= render 'filter_shared_companies' %>
+    </div>
+    <div class="col-6 p-2">
+      <p class="applications-data">
+        <%= "Applications Count: #{@shared_companies.length}" %>
+      </p>
     </div>
   </div>
 
-  <div class="row m-3">
-    <div class="col-12 text-center">
-      <%= render 'filter_shared_companies' %>
+  <div class="row mb-4 mt-4">
+    <div class="col-12 text-center text-primary">
+      <h3>
+        <span class="text-danger"><%= "#{@owner.email}'s" %></span> companies
+      </h3>
     </div>
   </div>
 

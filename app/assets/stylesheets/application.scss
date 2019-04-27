@@ -73,8 +73,9 @@ body {
 }
 
 .applications-data {
+  color: white;
   font-weight: bold;
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px grey;
   font-size: 18px;
 }
 
@@ -88,4 +89,18 @@ body {
 
 .status-index-inquired {
   color: green;
+}
+
+.control-actions {
+  background: black;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 3px 4px 4px 5px grey;
+}
+
+@media only screen and (max-width: 768px) {
+  .company-index-name {
+    font-size: 20px;
+  }
 }
