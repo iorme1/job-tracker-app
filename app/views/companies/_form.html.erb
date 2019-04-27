@@ -1,66 +1,114 @@
 <%= form_for @company do |f| %>
-  <% if @company.errors.any? %>
-    <div class="alert alert-danger">
-      <h4><%= pluralize(@company.errors.count, "error") %></h4>
-      <ul>
-        <% @company.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+  <div class="row">
+    <div class="col-12">
+      <% if @company.errors.any? %>
+        <div class="alert alert-danger">
+          <h4><%= pluralize(@company.errors.count, "error") %></h4>
+          <ul>
+            <% @company.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Name" %><br>
-    <%= f.text_area(:name, cols: 35, rows: 1) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Name" %><br>
+        <%= f.text_area :name, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Job Title" %><br>
-    <%= f.text_area(:job_title, cols: 60, rows: 1) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Job Title" %><br>
+        <%= f.text_area :job_title, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Website" %><br>
-    <%= f.text_area(:website, cols: 60, rows: 1) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Website" %><br>
+        <%= f.text_area :website, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Job Posting Link" %><br>
-    <%= f.text_area(:job_post_link, cols: 60, rows: 1) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Job Posting Link" %><br>
+        <%= f.text_area :job_post_link, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Summary" %><br>
-    <%= f.text_area(:summary, cols: 100, rows: 10) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Summary" %><br>
+        <%= f.text_area :summary, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Notes" %><br>
-    <%= f.text_area(:notes, cols: 100, rows: 10) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Notes" %><br>
+        <%= f.text_area :notes, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Cover Letter" %><br>
-    <%= f.text_area(:cover_letter, cols: 100, rows: 15) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Cover Letter" %><br>
+        <%= f.text_area :cover_letter, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Contacts" %><br>
-    <%= f.text_area(:contacts, cols: 100, rows: 5) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Contacts" %><br>
+        <%= f.text_area :contacts, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Company Technologies" %><br>
-    <%= f.text_area(:technologies, cols: 100, rows: 5) %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Company Technologies" %><br>
+        <%= f.text_area :technologies, :class => "form-control"  %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.label "Status" %><br>
-    <%= f.select :status, Company.statuses.keys.map { |w| [w.humanize, w] } %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.label "Status" %><br>
+        <%= f.select :status, Company.statuses.keys.map { |w| [w.humanize, w] } %>
+      </div><br>
+    </div>
+  </div>
 
-  <div class="form-field">
-    <%= f.submit "Save", class: "btn btn-info" %>
-  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div class="form-field">
+        <%= f.submit "Save", class: "btn btn-info" %>
+      </div><br>
+    </div>
+  </div>
 <% end %>
