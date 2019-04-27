@@ -1,15 +1,7 @@
 <div class="container-fluid">
   <div class="row text-center mt-3 mb-3">
     <div class="col-12">
-      <h1 class="animated bounceInDown font-italic">
-        Companies
-        <%= link_to new_company_path, class: "btn btn-outline-primary" do %>
-          New <i class="fa fa-plus"></i>
-        <% end %>
-        <%= link_to new_invitation_path, class: "btn btn-outline-primary" do %>
-          Share Progress <i class="fa fa-users"></i>
-        <% end %>
-      </h1>
+      <h1 class="animated bounceInDown font-italic">Companies</h1>
     </div>
   </div>
 
@@ -29,9 +21,22 @@
     <% end %>
   <% end %>
 
-  <div class="row m-3">
-    <div class="col-12 text-center">
+  <div class="row mt-3 mb-3 text-center">
+    <div class="col-4">
       <%= render 'filter_companies' %>
+    </div>
+    <div class="col-4">
+      <%= link_to new_invitation_path, class: "btn btn-outline-primary" do %>
+        Share Progress <i class="fa fa-users"></i>
+      <% end %>
+      <%= link_to new_company_path, class: "btn btn-outline-primary" do %>
+        New <i class="fa fa-plus"></i>
+      <% end %>
+    </div>
+    <div class="col-4">
+      <p class="applications-data">
+        <%= "Applications Count: #{@companies.length}" %>
+      </p>
     </div>
   </div>
 
