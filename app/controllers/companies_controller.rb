@@ -5,6 +5,7 @@ class CompaniesController < ApplicationController
   def index
     @shares = current_user.shares.all
     @pending_invitations = current_user.invitations.where(accepted: false)
+    @total_companies = current_user.total_user_companies
 
     if params[:status]
       @companies = current_user.companies.all
@@ -68,6 +69,7 @@ class CompaniesController < ApplicationController
   def shared_index
     @share = Share.find(params[:id])
     @owner = User.find_by_email(@share.authorized_by)
+    @total_companies = @owner.total_user_companies
 
     if params[:status]
       @shared_companies = @owner.companies.all

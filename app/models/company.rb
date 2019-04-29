@@ -3,7 +3,7 @@ class Company < ApplicationRecord
 
   default_scope { order("created_at DESC") }
   scope :status, -> (status) { where status: status }
-  
+
   enum status: [:pending, :rejected, :inquired]
 
   after_commit :pending_status, on: :create
@@ -14,5 +14,4 @@ class Company < ApplicationRecord
   def pending_status
     self.status = "pending"
   end
-
 end

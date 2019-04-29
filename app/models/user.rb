@@ -6,5 +6,9 @@ class User < ApplicationRecord
 
   has_many :companies
   has_many :invitations
-  has_many :shares 
+  has_many :shares
+
+  def total_user_companies
+    self.companies.length
+  end
 end
