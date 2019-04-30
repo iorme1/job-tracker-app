@@ -8,11 +8,14 @@ class CompaniesController < ApplicationController
     @total_companies = current_user.total_user_companies
 
     if params[:status]
-      @companies = current_user.companies.all
+      @companies = current_user
+        .companies
         .status(params[:status])
         .page params[:page]
     else
-      @companies = current_user.companies.all.page params[:page]
+      @companies = current_user
+        .companies
+        .page params[:page]
     end
   end
 
