@@ -1,4 +1,4 @@
 <%= form_tag companies_path, method: "get" do %>
-  <%= select_tag "status", options_for_select(["pending", "rejected", "inquired"]) %>
-  <%= submit_tag "Filter Companies", name: nil, class: "btn btn-primary m-2" %>
+  <%= select_tag :status, options_for_select(["pending", "rejected", "inquired"]), class: "form-control" %>
+  <%= submit_tag "Filter Companies", name: nil, class: "btn btn-primary form-control" %>
 <% end %>
